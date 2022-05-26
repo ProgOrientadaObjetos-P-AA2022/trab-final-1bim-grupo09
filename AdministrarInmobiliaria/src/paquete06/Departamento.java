@@ -10,5 +10,14 @@ package paquete06;
  * @author reroes
  */
 public class Departamento {
-    
+
+    private int numeroC;
+
+    public void setNumeroC(int numCuartos) {
+        this.numeroC = numCuartos;
+    }
+
+    public int getNumeroC() {
+        return numeroC;
+    }
 }

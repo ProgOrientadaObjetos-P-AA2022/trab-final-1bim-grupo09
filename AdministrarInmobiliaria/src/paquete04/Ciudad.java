@@ -10,5 +10,22 @@ package paquete04;
  * @author reroes
  */
 public class Ciudad {
-    
+
+    private String nombreC;
+    private String nombreP;
+
+    public void setNombreC (String nomCiudad){
+        this.nombreC=nomCiudad;
+    }
+    public void setNombreP (String nomProvincia){
+        this.nombreP=nomProvincia;
+    }
+
+    public String getNombreC() {
+        return nombreC;
+    }
+
+    public String getNombreP() {
+        return nombreP;
+    }
 }

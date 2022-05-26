@@ -10,5 +10,30 @@ package paquete02;
  * @author reroes
  */
 public class Propietario {
-    
+
+    private String nombre;
+    private String apellido;
+    private int identificaion;
+
+    public void setNombre (String nom){
+        this.nombre=nom;
+    }
+    public void setApellido (String ape){
+        this.apellido=ape;
+    }
+    public void setId (int id){
+        this.identificaion=id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public int getIdentificaion() {
+        return identificaion;
+    }
 }
