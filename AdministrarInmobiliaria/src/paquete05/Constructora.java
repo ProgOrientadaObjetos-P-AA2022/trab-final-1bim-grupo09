@@ -29,4 +29,12 @@ public class Constructora {
     public int getIdE() {
         return idE;
     }
+
+    public static void main(String[] args) {
+
+
+
+
+    }
+
 }

@@ -28,4 +28,11 @@ public class Ciudad {
     public String getNombreP() {
         return nombreP;
     }
+
+    public static void main(String[] args) {
+
+
+
+    }
+
 }

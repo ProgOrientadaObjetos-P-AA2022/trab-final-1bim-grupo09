@@ -15,25 +15,21 @@ public class Propietario {
     private String apellido;
     private int identificaion;
 
-    public void setNombre (String nom){
-        this.nombre=nom;
-    }
+    public void setNombre(String nombre) {this.nombre = nombre;}
+
     public void setApellido (String ape){
         this.apellido=ape;
     }
-    public void setId (int id){
-        this.identificaion=id;
+    public void setId (int id){this.identificaion=id;}
+
+    public String getNombre() {return nombre;}
+
+    public String getApellido() {return apellido;}
+
+    public int getIdentificaion() {return identificaion;}
+
+    public static void main(String[] args) {
+
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public int getIdentificaion() {
-        return identificaion;
-    }
 }

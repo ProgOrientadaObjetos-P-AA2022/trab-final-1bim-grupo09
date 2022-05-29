@@ -20,4 +20,11 @@ public class Departamento {
     public int getNumeroC() {
         return numeroC;
     }
+
+    public static void main(String[] args) {
+
+
+
+    }
+
 }
