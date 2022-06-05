@@ -12,6 +12,7 @@ public class LeerPropietario {
 
     public LeerPropietario(String nomArchivo) {
         this.nomArchivo = nomArchivo;
+        //esta llamando el archivo de la data
         File archivo = new File(nomArchivo);
         //Aqui verfificamos si el archivo existe y declaramos a entrada como un objeto del archivo Propietario.dat
         if(archivo.exists()){

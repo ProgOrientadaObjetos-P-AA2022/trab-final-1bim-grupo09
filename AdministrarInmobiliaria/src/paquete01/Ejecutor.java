@@ -59,7 +59,7 @@ public class Ejecutor {
             return pLocalizado;
         }else{
             System.out.println("Propietario no localizado,\n" +
-                    "Ingrese los datos des un nuevo proietario");
+                    "Ingrese los datos de un nuevo proietario");
             System.out.println("Ingrese el nombre del propietario");
             nom=entrada.nextLine();
             System.out.println("Ingrese el apellido del propietario");
