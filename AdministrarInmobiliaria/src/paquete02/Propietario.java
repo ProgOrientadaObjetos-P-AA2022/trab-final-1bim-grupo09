@@ -12,22 +12,22 @@ import java.io.*;
  */
 public class Propietario {
 
-    private String nombres;
-    private String apellidos;
+    private String nombre;
+    private String apellido;
     private String identificaion;
 
     public Propietario(String nombres, String apellidos, String identificaion) {
-        this.nombres = nombres;
-        this.apellidos = apellidos;
+        this.nombre = nombres;
+        this.apellido = apellidos;
         this.identificaion = identificaion;
     }
 
     public void setNombres(String nombres) {
-        this.nombres = nombres;
+        this.nombre = nombres;
     }
 
     public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+        this.apellido = apellidos;
     }
 
     public void setIdentificaion(String identificaion) {
@@ -35,11 +35,11 @@ public class Propietario {
     }
 
     public String getNombres() {
-        return nombres;
+        return nombre;
     }
 
     public String getApellidos() {
-        return apellidos;
+        return apellido;
     }
 
     public String getIdentificaion() {

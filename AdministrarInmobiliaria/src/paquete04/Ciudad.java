@@ -11,27 +11,28 @@ package paquete04;
  */
 public class Ciudad {
 
-    private String nomCiudad;
-    private String nomProvincia;
+    private String nombreC;
+    private String nombreP;
 
-    public Ciudad(String nomCiudad, String nomProvincia) {
-        this.nomCiudad = nomCiudad;
-        this.nomProvincia = nomProvincia;
+    public void setNombreC (String nomCiudad){
+        this.nombreC=nomCiudad;
+    }
+    public void setNombreP (String nomProvincia){
+        this.nombreP=nomProvincia;
     }
 
-    public void setNomCiudad(String nomCiudad) {
-        this.nomCiudad = nomCiudad;
+    public String getNombreC() {
+        return nombreC;
     }
 
-    public void setNomProvincia(String nomProvincia) {
-        this.nomProvincia = nomProvincia;
+    public String getNombreP() {
+        return nombreP;
     }
 
-    public String getNomCiudad() {
-        return nomCiudad;
+    public static void main(String[] args) {
+
+
+
     }
 
-    public String getNomProvincia() {
-        return nomProvincia;
-    }
 }
