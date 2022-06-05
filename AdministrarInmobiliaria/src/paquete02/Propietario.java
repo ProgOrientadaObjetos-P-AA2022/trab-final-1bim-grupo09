@@ -16,6 +16,33 @@ public class Propietario {
     private String apellidos;
     private String identificaion;
 
+    public Propietario(String nombres, String apellidos, String identificaion) {
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.identificaion = identificaion;
+    }
 
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
 
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public void setIdentificaion(String identificaion) {
+        this.identificaion = identificaion;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public String getIdentificaion() {
+        return identificaion;
+    }
 }
