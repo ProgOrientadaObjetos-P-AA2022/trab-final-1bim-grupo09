@@ -177,15 +177,14 @@ public class Ejecutor {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-        String nombreEdificio;
-        String ubicacionEdificio;
+        String nomEdi;
+        String ubicacion;
         Propietario propietario;
         Barrio barrio;
         Ciudad ciudad;
         Constructora constructora;
-        double precioMetroCuadrado, metrosCuadrados;
-        int op;
-        int numeroCuartos;
+        double precio, metrosCua;
+        int op, Cuartos;
         Ejecutor obj = new Ejecutor();
         System.out.println("Inicio del programa");
         do {
@@ -197,14 +196,14 @@ public class Ejecutor {
                     ciudad = localizarC();
                     constructora = localizarCons();
                     System.out.println("Ingrese el valor del metro cuadrado: ");
-                    precioMetroCuadrado = entrada.nextDouble();
+                    precio = entrada.nextDouble();
                     System.out.println("Ingrese el numero de metros cuadrados de la casa: ");
-                    metrosCuadrados = entrada.nextDouble();
+                    metrosCua = entrada.nextDouble();
                     System.out.println("Ingrese el numero de cuartos de la casa: ");
-                    numeroCuartos = entrada.nextInt();
-                    Casa casa = new Casa(precioMetroCuadrado, metrosCuadrados, numeroCuartos, propietario, barrio, ciudad, constructora);
-                    casa.setCostoFinal();
-                    EscribirCasa archivocasa = new EscribitCasa("datos/casa.dat");
+                    Cuartos = entrada.nextInt();
+                    Casa casa = new Casa(precio, metrosCua, Cuartos, propietario, barrio, ciudad, constructora);
+                    casa.setCosteC();
+                    EscribirCasa archivocasa = new EscribirCasa("datos/casa.dat");
                     archivocasa.setRegistro(casa);
                     archivocasa.setSalida();
                     break;
@@ -214,18 +213,18 @@ public class Ejecutor {
                     ciudad = localizarC();
                     constructora = localizarCons();
                     System.out.println("Ingrese el precio por metro cuadrado: ");
-                    precioMetroCuadrado = entrada.nextDouble();
+                    precio = entrada.nextDouble();
                     System.out.println("Ingrese el numero de metros cuadrados: ");
-                    metrosCuadrados = entrada.nextDouble();
+                    metrosCua = entrada.nextDouble();
                     System.out.println("Ingrese valor alicuota mensual: ");
                     Double valorAlicuota = entrada.nextDouble();
                     entrada.nextLine();
                     System.out.println("Ingrese el nombre del edificio: ");
-                    nombreEdificio = entrada.nextLine();
+                    nomEdi = entrada.nextLine();
                     System.out.println("Ingrese la ubicacion en el edificio: ");
-                    ubicacionEdificio = entrada.nextLine();
-                    Departamento departamento = new Departamento(propietario, precioMetroCuadrado, metrosCuadrados, valorAlicuota, barrio, ciudad, nombreEdificio, ubicacionEdificio, constructora);
-                    departamento.setValorFinal();
+                    ubicacion = entrada.nextLine();
+                    Departamento departamento = new Departamento(precio, metrosCua, valorAlicuota, nomEdi, ubicacion, propietario, barrio, ciudad, constructora);
+                    departamento.setCosteD();
                     EscribirDepartamento archivodepar = new EscribirDepartamento("datos/departamentos.dat");
                     archivodepar.setRegistro(departamento);
                     archivodepar.setSalida();
@@ -282,8 +281,6 @@ public class Ejecutor {
                     } while (op != 0);
                     op = 7;
                     break;
-                case 0:
-                    System.out.println("Fin del programa");
             }
         } while (op != 0);
 

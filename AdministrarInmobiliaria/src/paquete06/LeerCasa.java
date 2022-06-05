@@ -66,7 +66,9 @@ public class LeerCasa {
                     + "CIUDAD\n"
                     + "\tNombre Ciudad: %s Nombre Provincia: %s \n"
                     + "CONSTRUCTORA\n"
-                    + "\tNombre Constructora: %s Id Empresa: %s\n", cadena,(i + 1),
+                    + "\tNombre Constructora: %s Id Empresa: %s\n",
+                    cadena,
+                    (i + 1),
                     casa.get(i).getPropietario().getNombres(),
                     casa.get(i).getPropietario().getApellidos(),
                     casa.get(i).getPropietario().getIdentificaion(),
