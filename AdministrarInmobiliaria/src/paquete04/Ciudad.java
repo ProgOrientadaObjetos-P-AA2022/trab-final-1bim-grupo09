@@ -5,14 +5,21 @@
  */
 package paquete04;
 
+import java.io.Serializable;
+
 /**
  *
  * @author reroes
  */
-public class Ciudad {
+public class Ciudad implements Serializable {
 
     private String nombreC;
     private String nombreP;
+
+    public Ciudad(String nombreC, String nombreP) {
+        this.nombreC = nombreC;
+        this.nombreP = nombreP;
+    }
 
     public void setNombreC (String nomCiudad){
         this.nombreC=nomCiudad;
@@ -29,10 +36,9 @@ public class Ciudad {
         return nombreP;
     }
 
-    public static void main(String[] args) {
-
-
-
+    @Override
+    public String toString(){
+        String cadena = String.format("%s-&s\n",getNombreC(),getNombreP());
+        return cadena;
     }
-
 }
