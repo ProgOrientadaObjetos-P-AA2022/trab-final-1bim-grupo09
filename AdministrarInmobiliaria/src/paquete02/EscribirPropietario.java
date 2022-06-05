@@ -4,13 +4,13 @@ import java.util.*;
 
 public class EscribirPropietario {
 
-    private String nomAtchivo;
+    private String nomArchivo;
     private ObjectOutputStream salida;
     private Propietario registro;
     private ArrayList<Propietario> propietario;
 
     public EscribirPropietario(String nomAtchivo) {
-        this.nomAtchivo = nomAtchivo;
+        this.nomArchivo = nomAtchivo;
         setPropietario();
         try{
             //Aqui declaramos a salida como el archvio propietario.dat
@@ -26,7 +26,7 @@ public class EscribirPropietario {
         }
     }
 
-    public void setNomAtchivo(String nomAtchivo) {this.nomAtchivo = nomAtchivo;}
+    public void setNomArchivo(String nomArchivo) {this.nomArchivo = nomArchivo;}
 
     public void setSalida() {
         //Aqui enviamos la informacion del registro al archivo propiestario.dat
@@ -42,12 +42,12 @@ public class EscribirPropietario {
     public void setRegistro(Propietario registro) {this.registro = registro;}
 
     public void setPropietario() {
-        LeerPropietario leerP = new LeerPropietario(nomAtchivo);
+        LeerPropietario leerP = new LeerPropietario(nomArchivo);
         leerP.setPropietario();
         this.propietario = leerP.getPropietario();
     }
 
-    public String getNomAtchivo() {return nomAtchivo;}
+    public String getNomArchivo() {return nomArchivo;}
 
     public ObjectOutputStream getSalida() {return salida;}
 

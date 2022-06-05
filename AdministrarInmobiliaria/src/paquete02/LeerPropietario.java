@@ -90,4 +90,15 @@ public class LeerPropietario {
         }
         return cadena;
     }
+
+    public void errorArchivo(){
+        try {
+            if (entrada != null) {
+                entrada.close();
+            }
+        } catch (IOException ioException) {
+            System.out.println("A ocurrido un error al cerrar el archivo");
+        }
+    }
+
 }

@@ -5,11 +5,13 @@
  */
 package paquete05;
 
+import java.io.Serializable;
+
 /**
  *
  * @author reroes
  */
-public class Constructora {
+public class Constructora implements Serializable {
 
     private String nomConstructora;
     private String idEmpresa;
@@ -34,4 +36,11 @@ public class Constructora {
     public String getIdEmpresa() {
         return idEmpresa;
     }
+
+    @Override
+    public String toString(){
+        String cadena = String.format("%s - %s\n", getNomConstructora(), getIdEmpresa());
+        return cadena;
+    }
+
 }

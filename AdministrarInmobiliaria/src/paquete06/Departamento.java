@@ -5,11 +5,13 @@
  */
 package paquete06;
 
+import java.io.*;
+
 /**
  *
  * @author reroes
  */
-public class Departamento {
+public class Departamento implements Serializable {
 
     public static void main(String[] args) {
 

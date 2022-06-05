@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 package paquete04;
-
-import java.io.Serializable;
+import java.io.*;
 
 /**
  *
@@ -38,7 +37,10 @@ public class Ciudad implements Serializable {
 
     @Override
     public String toString(){
-        String cadena = String.format("%s-&s\n",getNombreC(),getNombreP());
+        String cadena = String.format("%s - %s\n",
+                getNombreC(),
+                getNombreP());
         return cadena;
     }
+
 }

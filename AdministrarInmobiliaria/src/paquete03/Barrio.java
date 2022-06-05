@@ -5,11 +5,13 @@
  */
 package paquete03;
 
+import java.io.Serializable;
+
 /**
  *
  * @author reroes
  */
-public class Barrio {
+public class Barrio implements Serializable {
 
     public String nomBarrio;
     public String referencia;
