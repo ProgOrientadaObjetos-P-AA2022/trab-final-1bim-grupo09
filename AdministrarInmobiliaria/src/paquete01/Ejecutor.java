@@ -22,7 +22,7 @@ public class Ejecutor {
         System.out.println("Ingrese los datos del barrio :                   [4]");
         System.out.println("Ingrese los datos de la ciudad :                 [5]");
         System.out.println("Ingrese los datos de la constructora :           [6]");
-        System.out.println("Presentar los datos :                             [7]");
+        System.out.println("Presentar los datos :                            [7]");
         System.out.println("Salir :                                          [0]");
         opc = entrada.nextInt();
         return opc;
@@ -233,7 +233,7 @@ public class Ejecutor {
                     String nombresPropietario = entrada.nextLine();
                     System.out.println("Ingrese apellidos del propietario: ");
                     String apellidosPropietario = entrada.nextLine();
-                    System.out.println("Ingrese identificacion del propietario(dni): ");
+                    System.out.println("Ingrese identificacion del propietario(cedula): ");
                     String identificacionPropietario = entrada.nextLine();
                     propietario = new Propietario(nombresPropietario, apellidosPropietario, identificacionPropietario);
                     EscribirPropietario archivop = new EscribirPropietario("datos/propietarios.dat");
