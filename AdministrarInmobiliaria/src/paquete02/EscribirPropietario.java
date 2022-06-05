@@ -56,7 +56,7 @@ public class EscribirPropietario {
     public ArrayList<Propietario> getPropietario() {return propietario;}
 
     public void errorArchivo(){
-        //Aqui presentamos en archvio propiestario.dat
+        //Aqui presentamos si esque hubo algun error al escribir en el erchivo
         try{
             if(salida != null){
                 salida.close();
