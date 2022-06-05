@@ -10,5 +10,14 @@ package paquete06;
  * @author reroes
  */
 public class Casa {
-    
+
+    public static void main(String[] args) {
+
+        double precioC;
+        double metrosC;
+        double costeC;
+        int cuartosC;
+
+    }
+
 }

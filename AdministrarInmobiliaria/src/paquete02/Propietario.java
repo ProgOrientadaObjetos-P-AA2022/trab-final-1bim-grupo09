@@ -22,27 +22,33 @@ public class Propietario {
         this.identificaion = identificaion;
     }
 
-    public void setNombres(String nombres) {
-        this.nombre = nombres;
-    }
+    public void setNombres(String nombres) {this.nombre = nombres;}
 
-    public void setApellidos(String apellidos) {
-        this.apellido = apellidos;
-    }
+    public void setApellidos(String apellidos) {this.apellido = apellidos;}
 
-    public void setIdentificaion(String identificaion) {
-        this.identificaion = identificaion;
-    }
+    public void setIdentificaion(String identificaion) {this.identificaion = identificaion;}
 
-    public String getNombres() {
-        return nombre;
-    }
+    public String getNombres() {return nombre;}
 
-    public String getApellidos() {
-        return apellido;
-    }
+    public String getApellidos() {return apellido;}
 
     public String getIdentificaion() {
         return identificaion;
+    }
+
+    public static void main(String[] args) {
+
+        String nom = null, ape= null, id= null;
+
+        Propietario propietario = new Propietario(nom, ape, id);
+
+        File archivo = new File("propietario.dat");
+
+        try{
+
+        } catch (Exception e) {
+            System.out.println("Error");
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -11,6 +11,16 @@ package paquete06;
  */
 public class Departamento {
 
+    public static void main(String[] args) {
 
+        double precioC;
+        double metrosC;
+        double alicuotaC;
+        double costeC;
+        int cuartosC;
+        String nombreEdi;
+        String ubicaion;
+
+    }
 
 }
