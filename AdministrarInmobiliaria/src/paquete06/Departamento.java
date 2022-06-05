@@ -11,20 +11,6 @@ package paquete06;
  */
 public class Departamento {
 
-    private int numeroC;
 
-    public void setNumeroC(int numCuartos) {
-        this.numeroC = numCuartos;
-    }
-
-    public int getNumeroC() {
-        return numeroC;
-    }
-
-    public static void main(String[] args) {
-
-
-
-    }
 
 }

@@ -11,28 +11,6 @@ package paquete03;
  */
 public class Barrio {
 
-    private String nombreB;
-    private String referencia;
 
-    public void setNombreB (String nomBarrio){
-        this.nombreB=nomBarrio;
-    }
-    public void setReferencia (String ref){
-        this.referencia=ref;
-    }
-
-    public String getNombreB() {
-        return nombreB;
-    }
-
-    public String getReferencia() {
-        return referencia;
-    }
-
-    public static void main(String[] args) {
-
-
-
-    }
 
 }

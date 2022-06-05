@@ -14,12 +14,14 @@ public class Ejecutor {
 
     public static void main(String[] args) {
 
+
+        /*
         Propietario pro = new Propietario();
         Barrio ba = new Barrio();
         Ciudad ci = new Ciudad();
         Constructora cons = new Constructora();
         Departamento de = new Departamento();
-
+        */
 
     }
     
