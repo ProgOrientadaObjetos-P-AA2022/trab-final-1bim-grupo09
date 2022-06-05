@@ -22,7 +22,7 @@ public class Ejecutor {
         System.out.println("Ingrese los datos del barrio :                   [4]");
         System.out.println("Ingrese los datos de la ciudad :                 [5]");
         System.out.println("Ingrese los datos de la constructora :           [6]");
-        System.out.println("Prsentar los datos :                             [7]");
+        System.out.println("Presentar los datos :                             [7]");
         System.out.println("Salir :                                          [0]");
         opc = entrada.nextInt();
         return opc;
@@ -186,7 +186,6 @@ public class Ejecutor {
         double precio, metrosCua;
         int op, Cuartos;
         Ejecutor obj = new Ejecutor();
-        System.out.println("Inicio del programa");
         do {
             op = obj.menu();
             switch (op) {
