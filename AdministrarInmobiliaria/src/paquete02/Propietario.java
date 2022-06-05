@@ -36,19 +36,9 @@ public class Propietario {
         return identificaion;
     }
 
-    public static void main(String[] args) {
-
-        String nom = null, ape= null, id= null;
-
-        Propietario propietario = new Propietario(nom, ape, id);
-
-        File archivo = new File("propietario.dat");
-
-        try{
-
-        } catch (Exception e) {
-            System.out.println("Error");
-            throw new RuntimeException(e);
-        }
+    @Override
+    public String toString(){
+        String v = String.format("%s - %s - %s\n", getNombres(), getApellidos(), getIdentificaion());
+        return v;
     }
 }
