@@ -12,9 +12,9 @@ import java.io.*;
  */
 public class Propietario implements Serializable {
 
-    private String nombre;
-    private String apellido;
-    private String identificacion;
+    private final String nombre;
+    private final String apellido;
+    private final String identificacion;
 
     public Propietario(String nombres, String apellidos, String identificacion) {
         this.nombre = nombres;
@@ -22,11 +22,6 @@ public class Propietario implements Serializable {
         this.identificacion = identificacion;
     }
 
-    public void setNombres(String nombres) {this.nombre = nombres;}
-
-    public void setApellidos(String apellidos) {this.apellido = apellidos;}
-
-    public void setIdentificaion(String identificaion) {this.identificacion = identificaion;}
 
     public String getNombres() {return nombre;}
 
@@ -38,7 +33,6 @@ public class Propietario implements Serializable {
 
     @Override
     public String toString(){
-        String cadena = String.format("%s - %s - %s\n", getNombres(), getApellidos(), getIdentificaion());
-        return cadena;
+        return String.format("%s - %s - %s\n", getNombres(), getApellidos(), getIdentificaion());
     }
 }

@@ -12,19 +12,12 @@ import java.io.*;
  */
 public class Ciudad implements Serializable {
 
-    private String nombreC;
-    private String nombreP;
+    private final String nombreC;
+    private final String nombreP;
 
     public Ciudad(String nombreC, String nombreP) {
         this.nombreC = nombreC;
         this.nombreP = nombreP;
-    }
-
-    public void setNombreC (String nomCiudad){
-        this.nombreC=nomCiudad;
-    }
-    public void setNombreP (String nomProvincia){
-        this.nombreP=nomProvincia;
     }
 
     public String getNombreC() {
@@ -37,10 +30,9 @@ public class Ciudad implements Serializable {
 
     @Override
     public String toString(){
-        String cadena = String.format("%s - %s\n",
+        return String.format("%s - %s\n",
                 getNombreC(),
                 getNombreP());
-        return cadena;
     }
 
 }

@@ -86,7 +86,7 @@ public class Ejecutor {
         nomB=entrada.nextLine();
         Barrio bLocalizado;
         LeerBarrio leerB = new LeerBarrio(nomArchivo);
-        leerB.setIdentificador(nomArchivo);
+        leerB.setIdentificador(nomB);
         leerB.setBuscarB();
         bLocalizado = leerB.getBuscarB();
         if(bLocalizado != null){
@@ -189,7 +189,7 @@ public class Ejecutor {
         do {
             op = obj.menu();
             switch (op) {
-                case 1:
+                case 1 -> {
                     propietario = localizarP();
                     barrio = localizarB();
                     ciudad = localizarC();
@@ -205,8 +205,8 @@ public class Ejecutor {
                     EscribirCasa archivocasa = new EscribirCasa("datos/casa.dat");
                     archivocasa.setRegistro(casa);
                     archivocasa.setSalida();
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     propietario = localizarP();
                     barrio = localizarB();
                     ciudad = localizarC();
@@ -216,7 +216,7 @@ public class Ejecutor {
                     System.out.println("Ingrese el numero de metros cuadrados: ");
                     metrosCua = entrada.nextDouble();
                     System.out.println("Ingrese valor alicuota mensual: ");
-                    Double valorAlicuota = entrada.nextDouble();
+                    double valorAlicuota = entrada.nextDouble();
                     entrada.nextLine();
                     System.out.println("Ingrese el nombre del edificio: ");
                     nomEdi = entrada.nextLine();
@@ -227,8 +227,8 @@ public class Ejecutor {
                     EscribirDepartamento archivodepar = new EscribirDepartamento("datos/departamentos.dat");
                     archivodepar.setRegistro(departamento);
                     archivodepar.setSalida();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println("Ingrese nombres del propietario: ");
                     String nombresPropietario = entrada.nextLine();
                     System.out.println("Ingrese apellidos del propietario: ");
@@ -240,19 +240,19 @@ public class Ejecutor {
                     System.out.println(propietario);
                     archivop.setRegistro(propietario);
                     archivop.setSalida();
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("Ingrese nombre del barrio: ");
                     String nombre = entrada.nextLine();
                     System.out.println("Ingrese referencia del barrio: ");
                     String referencia = entrada.nextLine();
                     barrio = new Barrio(nombre, referencia);
                     EscribirBarrio archivob = new EscribirBarrio("datos/barrios.dat");
-                    System.out.println(archivob.toString());
+                    System.out.println(archivob);
                     archivob.setRegistro(barrio);
                     archivob.setSalida();
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     System.out.println("Ingrese nombre de la ciudad: ");
                     String nombreCiudad = entrada.nextLine();
                     System.out.println("Ingrese nombre de la provincia: ");
@@ -261,9 +261,8 @@ public class Ejecutor {
                     EscribirCiudad archivociu = new EscribirCiudad("datos/ciudades.dat");
                     archivociu.setRegistro(ciudad);
                     archivociu.setSalida();
-                    break;
-                case 6:
-
+                }
+                case 6 -> {
                     System.out.println("Ingrese nombre de la constructora: ");
                     String nombreConstructora = entrada.nextLine();
                     System.out.println("Ingrese id de la constructora:");
@@ -272,14 +271,14 @@ public class Ejecutor {
                     EscribirConstructora archivocons = new EscribirConstructora("datos/constructoras.dat");
                     archivocons.setRegistro(c1);
                     archivocons.setSalida();
-                    break;
-                case 7:
+                }
+                case 7 -> {
                     do {
                         op = obj.menu2();
                         main2(op);
                     } while (op != 0);
                     op = 7;
-                    break;
+                }
             }
         } while (op != 0);
 
@@ -287,42 +286,42 @@ public class Ejecutor {
 
     public static void main2 (int op2) {
         switch (op2) {
-            case 1:
+            case 1 -> {
                 LeerCasa leerC = new LeerCasa("datos/casa.dat");
                 leerC.setCasa();
-                System.out.printf("%s", leerC.toString());
+                System.out.printf("%s", leerC);
                 leerC.errorArchivo();
-                break;
-            case 2:
+            }
+            case 2 -> {
                 LeerDepartamento leerD = new LeerDepartamento("datos/departamento.dat");
                 leerD.setDepartamento();
-                System.out.printf("%s", leerD.toString());
+                System.out.printf("%s", leerD);
                 leerD.errorArchivo();
-                break;
-            case 3:
+            }
+            case 3 -> {
                 LeerPropietario leerP = new LeerPropietario("datos/propietario.dat");
                 leerP.setPropietario();
-                System.out.printf("%s", leerP.toString());
+                System.out.printf("%s", leerP);
                 leerP.errorArchivo();
-                break;
-            case 4:
+            }
+            case 4 -> {
                 LeerBarrio leerB = new LeerBarrio("datos/barrio.dat");
                 leerB.setBarrio();
-                System.out.printf("%s", leerB.toString());
+                System.out.printf("%s", leerB);
                 leerB.errorArchivo();
-                break;
-            case 5:
+            }
+            case 5 -> {
                 LeerCiudad leerCiu = new LeerCiudad("datos/ciudad.dat");
                 leerCiu.setCiudad();
-                System.out.printf("%s", leerCiu.toString());
+                System.out.printf("%s", leerCiu);
                 leerCiu.errorArchivo();
-                break;
-            case 6:
+            }
+            case 6 -> {
                 LeerConstructora leerCons = new LeerConstructora("datos/constructora.dat");
                 leerCons.setConstructora();
-                System.out.printf("%s", leerCons.toString());
+                System.out.printf("%s", leerCons);
                 leerCons.errorArchivo();
-                break;
+            }
         }
 
     }

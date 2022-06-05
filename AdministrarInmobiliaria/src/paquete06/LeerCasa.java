@@ -41,13 +41,9 @@ public class LeerCasa {
         }
     }
 
-    public void setEntarda(ObjectInputStream entarda) {this.entarda = entarda;}
-
     public void setNomArchivo(String nomArchivo) {this.nomArchivo = nomArchivo;}
 
     public ArrayList<Casa> getCasa() {return casa;}
-
-    public ObjectInputStream getEntarda() {return entarda;}
 
     public String getNomArchivo() {return nomArchivo;}
 
@@ -55,18 +51,19 @@ public class LeerCasa {
     public String toString() {
         String cadena = "Casa\n";
         for(int i = 0;i<casa.size();i++){
-            Casa ca = casa.get(i);
-            cadena = String.format("%s(%d) Informacion casa:\n"
-                    + "PROPIETARIO\n"
-                    + "\tNombres: %s Apellidos: %s Identificacion: %s\n"
-                    + "DETALLES\n"
-                    + "\tPrecio metro cuadrado: %.2f Numero metros Cuadrados: %.2f Numero Cuartos: %d Costo final: %.2f\n"
-                    + "BARRIO\n"
-                    + "\tNombre barrio: %s Referencia: %s\n"
-                    + "CIUDAD\n"
-                    + "\tNombre Ciudad: %s Nombre Provincia: %s \n"
-                    + "CONSTRUCTORA\n"
-                    + "\tNombre Constructora: %s Id Empresa: %s\n",
+            cadena = String.format("""
+                            %s(%d) Informacion casa:
+                            PROPIETARIO
+                            \tNombres: %s Apellidos: %s Identificacion: %s
+                            DETALLES
+                            \tPrecio metro cuadrado: %.2f Numero metros Cuadrados: %.2f Numero Cuartos: %d Costo final: %.2f
+                            BARRIO
+                            \tNombre barrio: %s Referencia: %s
+                            CIUDAD
+                            \tNombre Ciudad: %s Nombre Provincia: %s\s
+                            CONSTRUCTORA
+                            \tNombre Constructora: %s Id Empresa: %s
+                            """,
                     cadena,
                     (i + 1),
                     casa.get(i).getPropietario().getNombres(),

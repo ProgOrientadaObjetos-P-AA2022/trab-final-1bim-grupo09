@@ -16,13 +16,13 @@ public class EscribirBarrio {
             //Aqui declaramos a salida como el archvio barrio.dat
             salida = new ObjectOutputStream(new FileOutputStream(nomArchivo));
             if(barrio.size()>0){
-                for(int i = 0; i<barrio.size();i++){
-                    setRegistro(barrio.get(i));
+                for (Barrio value : barrio) {
+                    setRegistro(value);
                     setSalida();
                 }
             }
         } catch (IOException IOexception) {
-            System.out.println("A ocurrio un error al abrir el archivo");;
+            System.out.println("A ocurrio un error al abrir el archivo");
         }
     }
 
@@ -40,15 +40,13 @@ public class EscribirBarrio {
 
     public void setRegistro(Barrio registro) {this.registro = registro;}
 
-    public void setBarrio(ArrayList<Barrio> barrio) {this.barrio = barrio;}
-
     public String getNomArchivo() {return nomArchivo;}
 
-    public ObjectOutputStream getSalida() {return salida;}
-
-    public Barrio getRegistro() {return registro;}
-
-    public ArrayList<Barrio> getBarrio() {return barrio;}
+    public void getBarrio() {
+        LeerBarrio ba = new LeerBarrio(nomArchivo);
+        ba.setBarrio();
+        barrio = ba.getBarrio();
+    }
 
     public void errorArchivo(){
         //Aqui presentamos si esque hubo algun error al escribir en el erchivo

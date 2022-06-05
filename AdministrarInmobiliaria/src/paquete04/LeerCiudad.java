@@ -71,8 +71,6 @@ public class LeerCiudad {
 
     public String getNomArchivo() {return nomArchivo;}
 
-    public String getIdentificador() {return identificador;}
-
     public Ciudad getBuscarC() {return buscarC;}
 
     @Override

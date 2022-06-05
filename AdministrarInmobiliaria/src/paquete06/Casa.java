@@ -17,14 +17,14 @@ import java.io.*;
  */
 public class Casa implements Serializable {
 
-    private double precioC;
-    private double metrosC;
+    private final double precioC;
+    private final double metrosC;
     private double costeC;
-    private int cuartosC;
-    private Propietario propietario;
-    private Barrio barrio;
-    private Ciudad ciudad;
-    private Constructora constructora;
+    private final int cuartosC;
+    private final Propietario propietario;
+    private final Barrio barrio;
+    private final Ciudad ciudad;
+    private final Constructora constructora;
 
     public Casa(double precioC, double metrosC, int cuartosC, Propietario propietario, Barrio barrio, Ciudad ciudad, Constructora constructora) {
         this.precioC = precioC;
@@ -36,23 +36,9 @@ public class Casa implements Serializable {
         this.constructora = constructora;
     }
 
-    public void setPrecioC(double precioC) {this.precioC = precioC;}
-
-    public void setMetrosC(double metrosC) {this.metrosC = metrosC;}
-
     public void setCosteC() {
         this.costeC = precioC*metrosC;
     }
-
-    public void setCuartosC(int cuartosC) {this.cuartosC = cuartosC;}
-
-    public void setPropietario(Propietario propietario) {this.propietario = propietario;}
-
-    public void setBarrio(Barrio barrio) {this.barrio = barrio;}
-
-    public void setCiudad(Ciudad ciudad) {this.ciudad = ciudad;}
-
-    public void setConstructora(Constructora constructora) {this.constructora = constructora;}
 
     public double getPrecioC() {return precioC;}
 
@@ -72,16 +58,18 @@ public class Casa implements Serializable {
 
     @Override
     public String toString(){
-        String cadena = String.format("Informacion casa:\n"
-                + "PROPIETARIO\n"
-                + "Nombres: %s Apellidos: %s Identificacion: %s\n"
-                + "Precio metro cuadrado: %.2f Numero metros Cuadrados: %.2f Numero Cuartos: %d Costo final: %.2f\n"
-                + "BARRIO\n"
-                + "Nombre barrio: %s Referencia: %s\n"
-                + "CIUDAD\n"
-                + "Nombre Ciudad: %s Nombre Provincia: %s \n"
-                + "CONSTRUCTORA\n"
-                + "Nombre Constructora: %s Id Empresa: %s\n",
+        return String.format("""
+                        Informacion casa:
+                        PROPIETARIO
+                        Nombres: %s Apellidos: %s Identificacion: %s
+                        Precio metro cuadrado: %.2f Numero metros Cuadrados: %.2f Numero Cuartos: %d Costo final: %.2f
+                        BARRIO
+                        Nombre barrio: %s Referencia: %s
+                        CIUDAD
+                        Nombre Ciudad: %s Nombre Provincia: %s\s
+                        CONSTRUCTORA
+                        Nombre Constructora: %s Id Empresa: %s
+                        """,
                 propietario.getNombres(),
                 propietario.getApellidos(),
                 propietario.getIdentificaion(),
@@ -95,7 +83,6 @@ public class Casa implements Serializable {
                 ciudad.getNombreP(),
                 constructora.getNomConstructora(),
                 constructora.getIdEmpresa());
-        return cadena;
     }
 
 }

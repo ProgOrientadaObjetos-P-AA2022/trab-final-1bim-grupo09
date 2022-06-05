@@ -9,7 +9,7 @@ public class EscribirCasa {
 
     String nomArchivo;
     private ArrayList<Casa> casa;
-    private ObjectOutputStream salida;
+    private final ObjectOutputStream salida;
     private Casa registro;
 
     public EscribirCasa(String nomArchivo) {
@@ -18,8 +18,8 @@ public class EscribirCasa {
         try{
             salida = new ObjectOutputStream(new FileOutputStream(nomArchivo));
             if(casa.size()>0){
-                for(int i = 0; i<casa.size();i++){
-                    setRegistro(casa.get(i));
+                for (Casa value : casa) {
+                    setRegistro(value);
                     setSalida();
                 }
             }
@@ -48,12 +48,6 @@ public class EscribirCasa {
     public void setRegistro(Casa registro) {this.registro = registro;}
 
     public String getNomArchivo() {return nomArchivo;}
-
-    public ArrayList<Casa> getCasa() {return casa;}
-
-    public ObjectOutputStream getSalida() {return salida;}
-
-    public Casa getRegistro() {return registro;}
 
     public void errorArchivo() {
         try {

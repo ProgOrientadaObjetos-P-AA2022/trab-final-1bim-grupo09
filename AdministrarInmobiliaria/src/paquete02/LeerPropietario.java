@@ -74,8 +74,6 @@ public class LeerPropietario {
 
     public String getNomArchivo() {return nomArchivo;}
 
-    public String getIdentificador() {return identificador;}
-
     public ArrayList<Propietario> getPropietario() {return propietario;}
 
     public Propietario getBuscarP() {return buscarP;}

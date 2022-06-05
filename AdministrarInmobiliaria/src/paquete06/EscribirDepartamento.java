@@ -5,9 +5,9 @@ import java.util.*;
 
 public class EscribirDepartamento {
 
-    private String nomArchivo;
+    private final String nomArchivo;
     private Departamento registro;
-    private ObjectOutputStream salida;
+    private final ObjectOutputStream salida;
     private ArrayList<Departamento> departamento;
 
     public EscribirDepartamento(String nomArchivo) {
@@ -16,8 +16,8 @@ public class EscribirDepartamento {
         try {
             salida = new ObjectOutputStream(new FileOutputStream(nomArchivo));
             if(departamento.size()>0){
-                for(int i = 0; i < departamento.size(); i++){
-                    setRegistro(departamento.get(i));
+                for (Departamento value : departamento) {
+                    setRegistro(value);
                     setSalida();
                 }
             }
@@ -26,8 +26,6 @@ public class EscribirDepartamento {
             throw new RuntimeException(e);
         }
     }
-
-    public void setNombreArchivo(String nomArchivo) {this.nomArchivo = nomArchivo;}
 
     public void setRegistro(Departamento registro) {this.registro = registro;}
 
@@ -46,12 +44,6 @@ public class EscribirDepartamento {
     }
 
     public String getNomArchivo() {return nomArchivo;}
-
-    public Departamento getRegistro() {return registro;}
-
-    public ObjectOutputStream getSalida() {return salida;}
-
-    public ArrayList<Departamento> getDepartamento() {return departamento;}
 
     public void errorArchivo() {
         try {

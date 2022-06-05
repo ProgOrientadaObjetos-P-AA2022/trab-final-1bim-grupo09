@@ -10,7 +10,7 @@ public class EscribirConstructora {
     private String nomArchivo;
     private ArrayList<Constructora> constructora;
     private Constructora registro;
-    private ObjectOutputStream salida;
+    private final ObjectOutputStream salida;
 
     public EscribirConstructora(String nomArchivo) {
         this.nomArchivo = nomArchivo;
@@ -18,8 +18,8 @@ public class EscribirConstructora {
         try{
             salida = new ObjectOutputStream(new FileOutputStream(nomArchivo));
             if(constructora.size()>0){
-                for(int i = 0;i<constructora.size();i++){
-                    setRegistro(constructora.get(i));
+                for (Constructora value : constructora) {
+                    setRegistro(value);
                     setSalida();
                 }
             }
@@ -49,12 +49,6 @@ public class EscribirConstructora {
     }
 
     public String getNomArchivo() {return nomArchivo;}
-
-    public ArrayList<Constructora> getConstructora() {return constructora;}
-
-    public Constructora getRegistro() {return registro;}
-
-    public ObjectOutputStream getSalida() {return salida;}
 
     public void errorArchivo() {
         try {

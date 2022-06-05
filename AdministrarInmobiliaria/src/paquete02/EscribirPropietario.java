@@ -5,7 +5,7 @@ import java.util.*;
 public class EscribirPropietario {
 
     private String nomArchivo;
-    private ObjectOutputStream salida;
+    private final ObjectOutputStream salida;
     private Propietario registro;
     private ArrayList<Propietario> propietario;
 
@@ -16,8 +16,8 @@ public class EscribirPropietario {
             //Aqui declaramos a salida como el archvio propietario.dat
             salida = new ObjectOutputStream(new FileOutputStream(nomAtchivo));
             if(propietario.size()>0){
-                for(int i =0;i<propietario.size();i++){
-                    setRegistro(propietario.get(i));
+                for (Propietario value : propietario) {
+                    setRegistro(value);
                     setSalida();
                 }
             }
@@ -48,12 +48,6 @@ public class EscribirPropietario {
     }
 
     public String getNomArchivo() {return nomArchivo;}
-
-    public ObjectOutputStream getSalida() {return salida;}
-
-    public Propietario getRegistro() {return registro;}
-
-    public ArrayList<Propietario> getPropietario() {return propietario;}
 
     public void errorArchivo(){
         //Aqui presentamos si esque hubo algun error al escribir en el erchivo

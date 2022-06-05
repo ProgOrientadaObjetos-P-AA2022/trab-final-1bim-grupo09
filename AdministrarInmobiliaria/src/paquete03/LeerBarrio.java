@@ -69,17 +69,11 @@ public class LeerBarrio {
         }
     }
 
-    public void setEntrada(ObjectInputStream entrada) {this.entrada = entrada;}
-
     public String getNomArchivo() {return nomArchivo;}
-
-    public String getIdentificador() {return identificador;}
 
     public Barrio getBuscarB() {return buscarB;}
 
     public ArrayList<Barrio> getBarrio() {return barrio;}
-
-    public ObjectInputStream getEntrada() {return entrada;}
 
     @Override
     public String toString() {

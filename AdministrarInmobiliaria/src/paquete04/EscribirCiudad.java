@@ -10,7 +10,7 @@ public class EscribirCiudad {
     private String nomArchivo;
     private Ciudad registro;
     private ArrayList<Ciudad> ciudad;
-    private ObjectOutputStream salida;
+    private final ObjectOutputStream salida;
 
     public EscribirCiudad(String nomArchivo) {
         this.nomArchivo = nomArchivo;
@@ -18,8 +18,8 @@ public class EscribirCiudad {
         try{
             salida = new ObjectOutputStream(new FileOutputStream(nomArchivo));
             if(ciudad.size()>0){
-                for(int i =0; i<ciudad.size();i++){
-                    setRegistro(ciudad.get(i));
+                for (Ciudad value : ciudad) {
+                    setRegistro(value);
                     setSalida();
                 }
             }
@@ -48,12 +48,6 @@ public class EscribirCiudad {
     }
 
     public String getNomArchivo() {return nomArchivo;}
-
-    public Ciudad getRegistro() {return registro;}
-
-    public ArrayList<Ciudad> getCiudad() {return ciudad;}
-
-    public ObjectOutputStream getSalida() {return salida;}
 
     public void errorArchivo() {
         try {

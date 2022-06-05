@@ -67,17 +67,11 @@ public class LeerConstructora {
         }
     }
 
-    public void setEntrada(ObjectInputStream entrada) {this.entrada = entrada;}
-
     public String getNomArchivo() {return nomArchivo;}
-
-    public String getIdentificar() {return identificar;}
 
     public ArrayList<Constructora> getConstructora() {return constructora;}
 
     public Constructora getBuscarCons() {return buscarCons;}
-
-    public ObjectInputStream getEntrada() {return entrada;}
 
     @Override
     public String toString() {

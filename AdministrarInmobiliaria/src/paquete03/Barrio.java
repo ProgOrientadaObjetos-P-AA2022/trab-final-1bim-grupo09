@@ -21,10 +21,6 @@ public class Barrio implements Serializable {
         this.referencia = referencia;
     }
 
-    public void setNomBarrio(String nomBarrio) {this.nomBarrio = nomBarrio;}
-
-    public void setReferencia(String referencia) {this.referencia = referencia;}
-
     public String getNomBarrio() {
         return nomBarrio;
     }
@@ -35,7 +31,6 @@ public class Barrio implements Serializable {
 
     @Override
     public String toString(){
-        String cadena = String.format("%s - %s\n", getNomBarrio(), getReferencia());
-        return cadena;
+        return String.format("%s - %s\n", getNomBarrio(), getReferencia());
     }
 }
