@@ -1,10 +1,10 @@
 package paquete01;
 
-import paquete02.Propietario;
-import paquete03.Barrio;
-import paquete04.Ciudad;
-import paquete05.Constructora;
-import paquete06.Departamento;
+import paquete02.*;
+import paquete03.*;
+import paquete04.*;
+import paquete05.*;
+import paquete06.*;
 
 /**
  *
